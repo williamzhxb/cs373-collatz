@@ -1,0 +1,60 @@
+FFFF..F
+======================================================================
+FAIL: test_eval_1 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 42, in test_eval_1
+    self.assertEqual(v, 1)
+AssertionError: 20 != 1
+
+======================================================================
+FAIL: test_eval_2 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 46, in test_eval_2
+    self.assertEqual(v, 1)
+AssertionError: 125 != 1
+
+======================================================================
+FAIL: test_eval_3 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 50, in test_eval_3
+    self.assertEqual(v, 1)
+AssertionError: 89 != 1
+
+======================================================================
+FAIL: test_eval_4 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 54, in test_eval_4
+    self.assertEqual(v, 1)
+AssertionError: 174 != 1
+
+======================================================================
+FAIL: test_solve (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 74, in test_solve
+    w.getvalue(), "1 10 1\n100 200 1\n201 210 1\n900 1000 1\n")
+AssertionError: '1 10 20\n100 200 125\n201 210 89\n900 1000 174\n' != '1 10 1\n100 200 1\n201 210 1\n900 1000 1\n'
+- 1 10 20
+?      ^^
++ 1 10 1
+?      ^
+- 100 200 125
+?          --
++ 100 200 1
+- 201 210 89
+?         ^^
++ 201 210 1
+?         ^
+- 900 1000 174
+?           --
++ 900 1000 1
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.021s
+
+FAILED (failures=5)

@@ -10,6 +10,8 @@
 # collatz_read
 # ------------
 
+cache = {}
+
 
 def collatz_read(s):
     """
@@ -26,17 +28,37 @@ def collatz_read(s):
 
 
 def collatz_CycleLength(n):
+    # making sure n is > 0
     assert n > 0
+    origin = n
+    found = -1
     c = 1
-    while n > 1 :
-        if (n % 2) == 0 :
+    # looping checking if n is still bigger than 1
+    while n > 1:
+        # if n is even
+        if (n % 2) == 0:
             n = (n >> 1)
-        else :
-            n = n +(n >> 1) + 1
             c += 1
-        c += 1
-    assert c > 0
-    return c
+            # after computation check again if it is in cache
+            if n in cache:
+                found = cache[n] + c - 1
+                cache[origin] = found
+                return found
+        # n is odd
+        else:
+            n = n + (n >> 1) + 1
+            c += 2
+            # after computation check again if it is in cache
+            if n in cache:
+                found = cache[n] + c - 1
+                cache[origin] = found
+                return found
+    # never found it in cache so add it in
+    if(found == -1):
+        cache[origin] = c
+        return c
+    # found it in cache just return
+    return found
 
 
 def collatz_eval(i, j):
@@ -57,17 +79,20 @@ def collatz_eval(i, j):
         lowerBound = j
         j = i
     elif j == i:
-        return collatz_CycleLength(i) 
-    if lowerBound <= 837799 and j >=837799:
+        return collatz_CycleLength(i)
+    # a eager cache suggested on canvas discussion by checking if max cycle
+    # length number is in the range
+    if lowerBound <= 837799 and j >= 837799:
         return 525
-    for n in range(lowerBound, j+1):
-        c = collatz_CycleLength(n)
+    # going through the actual range
+    for n in range(lowerBound, j + 1):
+        if n in cache:
+            c = cache[n]
+        else:
+            c = collatz_CycleLength(n)
         if maxCycleLength < c:
             maxCycleLength = c
     return maxCycleLength
-
-
-
 
     return 1
 

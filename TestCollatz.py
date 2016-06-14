@@ -27,26 +27,26 @@ class TestCollatz (TestCase):
     # read
     # ----
 
-    def test_read(self):
+    def test_read1(self):
         s = "1 10\n"
         i, j = collatz_read(s)
         self.assertEqual(i,  1)
         self.assertEqual(j, 10)
 
-    #adding more tests
-    def test_read(self):
+    # adding more tests
+    def test_read2(self):
         s = "22 220\n"
         i, j = collatz_read(s)
         self.assertEqual(i, 22)
         self.assertEqual(j, 220)
 
-    def test_read(self):
+    def test_read3(self):
         s = "55 10\n"
         i, j = collatz_read(s)
         self.assertEqual(i, 55)
         self.assertEqual(j, 10)
 
-    def test_read(self):
+    def test_read4(self):
         s = "5 110\n"
         i, j = collatz_read(s)
         self.assertEqual(i,  5)
@@ -72,7 +72,7 @@ class TestCollatz (TestCase):
         v = collatz_eval(900, 1000)
         self.assertEqual(v, 174)
 
-    #adding more tests
+    # adding more tests
 
     def test_eval_5(self):
         v = collatz_eval(50, 50)
@@ -99,7 +99,7 @@ class TestCollatz (TestCase):
         collatz_print(w, 1, 10, 20)
         self.assertEqual(w.getvalue(), "1 10 20\n")
 
-    #adding more tests
+    # adding more tests
     def test_print1(self):
         w = StringIO()
         collatz_print(w, 5, 15, 25)
@@ -110,6 +110,7 @@ class TestCollatz (TestCase):
         collatz_print(w, 99, 110, 120)
 
         self.assertEqual(w.getvalue(), "99 110 120\n")
+
     def test_print3(self):
         w = StringIO()
         collatz_print(w, 46, 140, 220)
@@ -126,7 +127,7 @@ class TestCollatz (TestCase):
         self.assertEqual(
             w.getvalue(), "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
 
-    #adding more tests
+    # adding more tests
 
     def test_solve1(self):
         r = StringIO("765 821\n43 100\n12 45\n")
@@ -156,7 +157,7 @@ class TestCollatz (TestCase):
         self.assertEqual(
             w.getvalue(), "3 5 8\n57 154 122\n9 87 116\n")
 
-    #adding tests for my own functions
+    # adding tests for my own functions
     def test_cycleLength1(self):
         s = 5
         i = collatz_CycleLength(s)
@@ -178,12 +179,9 @@ class TestCollatz (TestCase):
         self.assertEqual(i,  71)
 
 
-
-
 # ----
 # main
 # ----
-
 if __name__ == "__main__":
     main()
 

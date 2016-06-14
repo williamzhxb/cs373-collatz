@@ -2,3 +2,6 @@ EID: yz5297
 Name: yu zhong
 CS Account: williamz
 time for project guess: 20 hours
+
+descrpiton : implemented a eager cache with knowing the maximum number of cycle length =525 between numbers 1 to 1 million.
+			 implemented a lazy cache with a dictionary globally define. updates when start computing the numbers.

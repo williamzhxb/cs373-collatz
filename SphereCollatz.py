@@ -10,6 +10,9 @@
 # collatz_read
 # ------------
 
+# adding global set  for cache
+# it is a lazy cache, updating when read in files
+cache = {}
 
 
 def collatz_read(s):
@@ -25,20 +28,38 @@ def collatz_read(s):
 # collatz_eval
 # ------------
 
+#compute cyclength of one number
 
-def collatzCycleLength(n):
+def collatz_CycleLength(n):
+    #making sure n is > 0
     assert n > 0
+    origin = n
+    found = -1
     c = 1
+    #looping checking if n is still bigger than 1
     while n > 1 :
+        # if n is even
         if (n % 2) == 0 :
-            n = (n // 2)
-        else :
-            n = (3 * n) + 1
-            n = (n // 2)
+            n = (n >> 1)
             c += 1
-        c += 1
-    assert c > 0
-    return c
+            if n in cache:
+                found = cache[n] + c - 1
+                cache[origin] = found
+                return found
+        # n is odd
+        else :
+            n = n +(n >> 1) + 1
+            c += 2
+            if n in cache:
+                found = cache[n] + c - 1
+                cache[origin] = found
+                return found
+    #never found it in cache so add it in
+    if(found == -1):
+        cache[origin] = c
+        return c  
+    #found it in cache just return 
+    return found
 
 
 def collatz_eval(i, j):
@@ -53,17 +74,20 @@ def collatz_eval(i, j):
     maxCycleLength = 0
     lowerBound = i
 
-    if j//2 >= i:
-        lowerBound = j//2
+    if (j // 2) >= i:
+        lowerBound = j // 2
     elif j < i:
         lowerBound = j
         j = i
     elif j == i:
-        return collatzCycleLength(i) 
+        return collatz_CycleLength(i) 
     if lowerBound <= 837799 and j >=837799:
         return 525
     for n in range(lowerBound, j+1):
-        c = collatzCycleLength(n)
+        if n in cache:
+            c = cache[n]
+        else:
+            c = collatz_CycleLength(n)
         if maxCycleLength < c:
             maxCycleLength = c
     return maxCycleLength
@@ -115,7 +139,7 @@ import sys
 if __name__ == "__main__":
     collatz_solve(sys.stdin, sys.stdout)
 
-""" #pragma: no cover
+""" #pragma: no cover 
 % cat RunCollatz.in
 1 10
 100 200

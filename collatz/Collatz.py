@@ -54,7 +54,12 @@ def collatz_eval(i, j):
 
     if j//2 >= i:
         lowerBound = j//2
-    for n in range(lowerBound-1, j):
+    elif j < i:
+        lowerBound = j
+        j = i
+    elif j == i:
+        return collatzCycleLength(i) 
+    for n in range(lowerBound, j+1):
         c = collatzCycleLength(n)
         if maxCycleLength < c:
             maxCycleLength = c

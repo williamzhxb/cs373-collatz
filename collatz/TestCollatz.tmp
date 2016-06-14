@@ -1,60 +1,78 @@
-FFFF..F
+....FF.FF..........F.F.........
 ======================================================================
-FAIL: test_eval_1 (__main__.TestCollatz)
+FAIL: test_collatz_eval_i_equal_j_1 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 42, in test_eval_1
-    self.assertEqual(v, 1)
-AssertionError: 20 != 1
+  File "TestCollatz.py", line 220, in test_collatz_eval_i_equal_j_1
+    self.assertEqual(max_cycle_length,   7)
+AssertionError: 20 != 7
 
 ======================================================================
-FAIL: test_eval_2 (__main__.TestCollatz)
+FAIL: test_collatz_eval_i_equal_j_2 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 46, in test_eval_2
-    self.assertEqual(v, 1)
-AssertionError: 125 != 1
+  File "TestCollatz.py", line 224, in test_collatz_eval_i_equal_j_2
+    self.assertEqual(max_cycle_length,    17)
+AssertionError: 118 != 17
 
 ======================================================================
-FAIL: test_eval_3 (__main__.TestCollatz)
+FAIL: test_collatz_eval_i_larger_j_1 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 50, in test_eval_3
-    self.assertEqual(v, 1)
-AssertionError: 89 != 1
+  File "TestCollatz.py", line 212, in test_collatz_eval_i_larger_j_1
+    self.assertEqual(max_cycle_length, 20)
+AssertionError: 0 != 20
 
 ======================================================================
-FAIL: test_eval_4 (__main__.TestCollatz)
+FAIL: test_collatz_eval_i_larger_j_2 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 54, in test_eval_4
-    self.assertEqual(v, 1)
-AssertionError: 174 != 1
+  File "TestCollatz.py", line 216, in test_collatz_eval_i_larger_j_2
+    self.assertEqual(max_cycle_length,    174)
+AssertionError: 0 != 174
 
 ======================================================================
-FAIL: test_solve (__main__.TestCollatz)
+FAIL: test_collatz_solve_2 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 74, in test_solve
-    w.getvalue(), "1 10 1\n100 200 1\n201 210 1\n900 1000 1\n")
-AssertionError: '1 10 20\n100 200 125\n201 210 89\n900 1000 174\n' != '1 10 1\n100 200 1\n201 210 1\n900 1000 1\n'
-- 1 10 20
-?      ^^
-+ 1 10 1
-?      ^
-- 100 200 125
-?          --
-+ 100 200 1
-- 201 210 89
-?         ^^
-+ 201 210 1
-?         ^
-- 900 1000 174
-?           --
-+ 900 1000 1
+  File "TestCollatz.py", line 318, in test_collatz_solve_2
+    w.getvalue(), "42 59 113\n6 56 113\n3 5 8\n5 25 24\n")
+AssertionError: '42 59 113\n6 56 113\n3 5 8\n5 25 21\n' != '42 59 113\n6 56 113\n3 5 8\n5 25 24\n'
+  42 59 113
+  6 56 113
+  3 5 8
+- 5 25 21
+?       ^
++ 5 25 24
+?       ^
+
+
+======================================================================
+FAIL: test_collatz_solve_4 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 332, in test_collatz_solve_4
+    w.getvalue(), "60 52 113\n40 23 112\n40 40 9\n88 86 31\n")
+AssertionError: '60 52 0\n40 23 0\n40 40 35\n88 86 0\n' != '60 52 113\n40 23 112\n40 40 9\n88 86 31\n'
+- 60 52 0
+?       ^
++ 60 52 113
+?       ^^^
+- 40 23 0
+?       ^
++ 40 23 112
+?       ^^^
+- 40 40 35
+?       ^^
++ 40 40 9
+?       ^
+- 88 86 0
+?       ^
++ 88 86 31
+?       ^^
 
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.021s
+Ran 31 tests in 0.029s
 
-FAILED (failures=5)
+FAILED (failures=6)

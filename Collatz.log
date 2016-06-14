@@ -1,0 +1,61 @@
+commit 7c3dce9e4f31f7b5bac5a393b6efa2393a12b458
+Author: yu zhong <williamz@cs.utexas.edu>
+Date:   Tue Jun 14 16:09:02 2016 -0500
+
+    make clean before turn in
+
+commit 6db2b171de0f9cd516215939be2fd258ee7edbe4
+Author: yu zhong <williamz@cs.utexas.edu>
+Date:   Tue Jun 14 16:07:01 2016 -0500
+
+    deleted subfolders and added both type of tests
+
+commit 7d4104d5659ff09c86902ff162d585b81f20ec12
+Author: yu zhong <williamz@cs.utexas.edu>
+Date:   Mon Jun 13 19:43:46 2016 -0500
+
+    unitest working, checked with one of the testfile on the publi repo too. all working fine
+
+commit 80d44b6f9dcedeb3115fd5a8dd302ca889892f16
+Author: yu zhong <williamz@cs.utexas.edu>
+Date:   Mon Jun 13 19:21:04 2016 -0500
+
+    fixed all the tests and a ctually got the simple unitest working with new solution
+
+commit 606f57db884d39d445cc93e913ccf81e742f17c3
+Author: yu zhong <williamz@cs.utexas.edu>
+Date:   Mon Jun 13 18:23:07 2016 -0500
+
+    changed the test case and notice the failure on make test command
+
+commit d52c9ba49b9b8e20e001c071f9bae4f94ac7ac2d
+Author: yu zhong <williamz@cs.utexas.edu>
+Date:   Mon Jun 13 17:37:54 2016 -0500
+
+    added traivs CI and checking if it is working and edit readme file
+
+commit e13108ee42222cffdf417a82c422a5a97d25b0dc
+Author: yu zhong <williamz@cs.utexas.edu>
+Date:   Mon Jun 13 17:16:50 2016 -0500
+
+    adding travis yml file
+
+commit c0fbe1d7d75fca4e8e47c5e5b995f2a431948e93
+Author: yu zhong <williamz@cs.utexas.edu>
+Date:   Mon Jun 13 17:06:55 2016 -0500
+
+    adding inital project(statring code)
+
+commit 94b15d4934f9fe7a61e294b0606992d9e3697ff6
+Author: williamzhxb <williamyz5297@utexas.edu>
+Date:   Mon Jun 13 16:56:18 2016 -0500
+
+    creatingreadme file
+    
+    creatingreadme file
+
+commit 28d2cfa02327837b48880f30c5982ec00ed7992d
+Author: williamzhxb <williamyz5297@utexas.edu>
+Date:   Mon Jun 13 16:51:32 2016 -0500
+
+    Initial commit

@@ -11,6 +11,7 @@
 # ------------
 
 
+
 def collatz_read(s):
     """
     read two ints
@@ -59,6 +60,8 @@ def collatz_eval(i, j):
         j = i
     elif j == i:
         return collatzCycleLength(i) 
+    if lowerBound <= 837799 and j >=837799:
+        return 525
     for n in range(lowerBound, j+1):
         c = collatzCycleLength(n)
         if maxCycleLength < c:
@@ -96,6 +99,43 @@ def collatz_solve(r, w):
     w a writer
     """
     for s in r:
+        if s == '\n':
+            break
         i, j = collatz_read(s)
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+
+import sys
+
+
+# ----
+# main
+# ----
+
+if __name__ == "__main__":
+    collatz_solve(sys.stdin, sys.stdout)
+
+""" #pragma: no cover
+% cat RunCollatz.in
+1 10
+100 200
+201 210
+900 1000
+
+
+
+% RunCollatz.py < RunCollatz.in > RunCollatz.out
+
+
+
+% cat RunCollatz.out
+1 10 1
+100 200 1
+201 210 1
+900 1000 1
+
+
+
+% pydoc3 -w Collatz
+# That creates the file Collatz.html
+"""

@@ -2,7 +2,107 @@
 100 200 125
 201 210 89
 900 1000 174
-         412 function calls (411 primitive calls) in 0.002 seconds
+100000 200000 383
+300000 200000 443
+300000 400000 441
+500000 400000 449
+500000 600000 470
+700000 600000 509
+700000 800000 504
+900000 800000 525
+8 8 4
+16 16 5
+32 32 6
+64 64 7
+128 128 8
+256 256 9
+512 512 10
+1024 1024 11
+2048 2048 12
+4096 4096 13
+8192 8192 14
+16384 16384 15
+32768 32768 16
+65536 65536 17
+131072 131072 18
+262144 262144 19
+524288 524288 20
+3 3 8
+7 7 17
+15 15 18
+17 17 13
+1023 1023 63
+1025 1025 37
+2047 2047 157
+242 59 128
+43 96 116
+65 100 119
+13 52 112
+54 77 116
+656 945 179
+87 645 144
+45 64 113
+56 84 116
+765 821 153
+43 100 119
+12 45 112
+73 200 125
+6 56 113
+8 16 20
+3 5 8
+57 154 122
+9 87 116
+31 14 112
+68 31 113
+68 54 113
+88 86 31
+59 70 108
+21 50 112
+65 70 28
+73 90 116
+48 200 125
+59 100 119
+26 150 122
+15 60 113
+487 500 142
+32 37 27
+65 95 116
+98 110 114
+87 120 119
+2913 937828 525
+1772 389461 443
+558 263072 443
+700 170258 383
+2331 58600 340
+2485 239670 443
+1037 381282 443
+2872 783246 509
+103 240100 443
+1826 445066 449
+3049 926343 525
+58 999 179
+90 20 116
+2984 2804 217
+3333 3333 31
+4303 4300 109
+43092 9482 324
+3092 30230 308
+30940 30330 254
+5885 9585 262
+3434 9404 262
+2222 2222 33
+3213 3125 199
+1260 3850 238
+2950 3921 238
+9239 13921 276
+9249 4892 262
+9403 4949 262
+552 779 171
+339 390 126
+392 492 142
+492 409 142
+4843 9302 262
+         2268101 function calls (2268100 primitive calls) in 28.306 seconds
 
    Ordered by: standard name
 
@@ -10,16 +110,16 @@
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1000(__init__)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1019(init_module_attrs)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1099(create)
-        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:1122(_exec)
-        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:1186(_load_unlocked)
+        1    0.000    0.000    0.007    0.007 <frozen importlib._bootstrap>:1122(_exec)
+        1    0.000    0.000    0.007    0.007 <frozen importlib._bootstrap>:1186(_load_unlocked)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1266(find_spec)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:129(_new_module)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1336(find_spec)
-        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:1465(exec_module)
-        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:1534(get_code)
+        1    0.000    0.000    0.007    0.007 <frozen importlib._bootstrap>:1465(exec_module)
+        1    0.000    0.000    0.007    0.007 <frozen importlib._bootstrap>:1534(get_code)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1591(__init__)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1616(get_filename)
-        1    0.001    0.001    0.001    0.001 <frozen importlib._bootstrap>:1621(get_data)
+        1    0.001    0.001    0.007    0.007 <frozen importlib._bootstrap>:1621(get_data)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1631(path_stats)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:172(__init__)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1870(_path_importer_cache)
@@ -32,8 +132,8 @@
         3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:2124(__exit__)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:2147(_find_spec)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:217(release)
-        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:2207(_find_and_load_unlocked)
-        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:2234(_find_and_load)
+        1    0.000    0.000    0.007    0.007 <frozen importlib._bootstrap>:2207(_find_and_load_unlocked)
+        1    0.000    0.000    0.007    0.007 <frozen importlib._bootstrap>:2234(_find_and_load)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:2264(_handle_fromlist)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:257(__init__)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:261(__enter__)
@@ -64,18 +164,18 @@
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:87(_path_isfile)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:884(spec_from_file_location)
         1    0.000    0.000    0.000    0.000 Collatz.py:14(<module>)
-        4    0.000    0.000    0.000    0.000 Collatz.py:14(collatz_read)
-      218    0.001    0.000    0.001    0.000 Collatz.py:28(collatzCycleLength)
-        4    0.000    0.000    0.002    0.000 Collatz.py:43(collatz_eval)
-        4    0.000    0.000    0.000    0.000 Collatz.py:73(collatz_print)
-        1    0.000    0.000    0.002    0.002 Collatz.py:88(collatz_solve)
-        1    0.000    0.000    0.002    0.002 RunCollatz.py:13(<module>)
-        2    0.000    0.000    0.000    0.000 codecs.py:316(decode)
+      104    0.000    0.000    0.000    0.000 Collatz.py:14(collatz_read)
+  2267409   27.991    0.000   27.991    0.000 Collatz.py:28(collatz_CycleLength)
+      104    0.307    0.003   28.298    0.272 Collatz.py:42(collatz_eval)
+      104    0.000    0.000    0.000    0.000 Collatz.py:79(collatz_print)
+        1    0.000    0.000   28.299   28.299 Collatz.py:94(collatz_solve)
+        1    0.000    0.000   28.306   28.306 RunCollatz.py:13(<module>)
+        1    0.000    0.000    0.000    0.000 codecs.py:316(decode)
         1    0.000    0.000    0.000    0.000 {built-in method _fix_co_filename}
         3    0.000    0.000    0.000    0.000 {built-in method acquire_lock}
         2    0.000    0.000    0.000    0.000 {built-in method allocate_lock}
         1    0.000    0.000    0.000    0.000 {built-in method any}
-      2/1    0.000    0.000    0.002    0.002 {built-in method exec}
+      2/1    0.000    0.000   28.306   28.306 {built-in method exec}
         2    0.000    0.000    0.000    0.000 {built-in method from_bytes}
         2    0.000    0.000    0.000    0.000 {built-in method get_ident}
         5    0.000    0.000    0.000    0.000 {built-in method getattr}
@@ -88,15 +188,15 @@
         1    0.000    0.000    0.000    0.000 {built-in method loads}
         4    0.000    0.000    0.000    0.000 {built-in method release_lock}
         3    0.000    0.000    0.000    0.000 {built-in method stat}
-        2    0.000    0.000    0.000    0.000 {built-in method utf_8_decode}
+        1    0.000    0.000    0.000    0.000 {built-in method utf_8_decode}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
         1    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
         5    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
         9    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
-        1    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+        1    0.006    0.006    0.006    0.006 {method 'read' of '_io.FileIO' objects}
         7    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
        16    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
-        4    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
-        4    0.000    0.000    0.000    0.000 {method 'write' of '_io.TextIOWrapper' objects}
+      104    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+      104    0.000    0.000    0.000    0.000 {method 'write' of '_io.TextIOWrapper' objects}
 
 
